@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net45;netstandard2.0;netcoreapp2.1</TargetFrameworks>
+    <Version>1.0.0</Version>
+    <Authors>Carlos Daniel Angulo López</Authors>
+    <Company>Celeris-Soft</Company>
+    <Description>Simple library to logging events in the .NET/.NET Core Framework.</Description>
+    <Copyright>Copyright © 2020 Carlos Daniel Angulo López</Copyright>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <RepositoryType></RepositoryType>
+  </PropertyGroup>
+
+  <!--NET Standard-->
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+    <DefineConstants>;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
+  </ItemGroup>
+  <!--NET Core-->
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1'">
+    <DefineConstants>NETCORE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1'">
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
+  </ItemGroup>
+  <!--NET Full-->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45'">
+    <DefineConstants>NET45;NETFULL</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net45|AnyCPU'">
+    <DocumentationFile>G:\.NET Standar Projects\PlusLog\PlusLog\PlusLog\PlusLog.xml</DocumentationFile>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove="Template\Template.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Template\Template.html" />
+  </ItemGroup>
+
+
+</Project>

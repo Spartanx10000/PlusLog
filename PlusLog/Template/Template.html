@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>PlusLog</title>
+
+<style>
+* { 
+	margin:0;
+	padding:0;
+}
+* { 
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; 
+}
+
+img { 
+	max-width: 100%; 
+}
+
+body {
+	-webkit-font-smoothing:antialiased; 
+	-webkit-text-size-adjust:none; 
+	width: 100%!important; 
+	height: 100%;
+}
+
+/* ------------------------------------- 
+		ELEMENTS 
+------------------------------------- */
+p.callout {
+	padding:15px;
+	background-color:#ECF8FF;
+	margin-bottom: 15px;
+}
+.callout a {
+	font-weight:bold;
+	color: #2BA6CB;
+}
+
+/* ------------------------------------- 
+		HEADER 
+------------------------------------- */
+table.head-wrap { 
+	width: 100%;
+	background: #FFFFFF;
+}
+
+.header.container table td.logo { padding: 15px; }
+.header.container table td.label { padding: 15px; padding-left:0px;}
+
+
+/* ------------------------------------- 
+		BODY 
+------------------------------------- */
+table.body-wrap { width: 100%;}
+
+
+/* ------------------------------------- 
+		FOOTER 
+------------------------------------- */
+table.footer-wrap { 
+	width: 100%;	
+	clear:both!important;
+}
+.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+.footer-wrap .container td.content p {
+	font-size:10px;
+	font-weight: bold;
+}
+
+
+/* ------------------------------------- 
+		TYPOGRAPHY 
+------------------------------------- */
+h1,h2,h3,h4,h5,h6 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	line-height: 1.1; 
+	margin-bottom:15px; 
+	color:#000;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { 
+	font-size: 60%; 
+	color: #6f6f6f; 
+	line-height: 0; 
+	text-transform: none; 
+}
+
+h1 { font-weight:200; font-size: 44px;}
+h2 { font-weight:200; font-size: 37px;}
+h3 { font-weight:500; font-size: 27px;}
+h4 { font-weight:500; font-size: 23px;}
+h5 { font-weight:900; font-size: 17px;}
+h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:#444;}
+
+
+p, ul { 
+	margin-bottom: 10px; 
+	font-weight: normal; 
+	font-size:14px; 
+	line-height:1.6;
+}
+p.lead { font-size:17px; }
+p.last { margin-bottom:0px;}
+
+/* --------------------------------------------------- 
+		RESPONSIVENESS
+------------------------------------------------------ */
+.container {
+	display:block!important;
+	max-width:600px!important;
+	margin:0 auto!important;
+	clear:both!important;
+}
+
+.content {
+	padding:15px;
+	max-width:600px;
+	margin:0 auto;
+	display:block; 
+}
+
+.content table { width: 100%; }
+
+/* ------------------------------------------- 
+		PHONES
+-------------------------------------------- */
+@media only screen and (max-width: 600px) {
+	
+	a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+
+	div[class="column"] { width: auto!important; float:none!important;}
+	
+	table.social div[class="column"] {
+		width:auto!important;
+	}
+
+}
+</style>
+
+</head>
+ 
+<body bgcolor="#FFFFFF">
+
+<table class="head-wrap" >
+	<tr>
+		<td></td>
+		<td class="header container" >			
+				<div class="content">
+				<table>
+					<tr>
+						<td align="left"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANIAAAAyCAIAAACmvxKXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVNSURBVHhe7ZuxiltHFIb3FfYJUugV1LreNp2ewMU2eQCV6RbcbbPg0sWSzinUhBQGFSG4WaeyDbsGGxIIwpAQBwcMys+c/47OntEdzV1Jd2Td8zGF7pwz0hX6ds7MSHty8vzb42tL57Bx7ZwKuHZOBVw7pwKunVMB186pgGvnVMC1cyrg2jkVcO2cCrh2TgV2pt2j+fTDvws+63L54x+/moQ+G2/COVR2pt13vz3lUwbe/vO7Seiz8SacQ2Wl3eXdjH3rwEz26q93z96/+Oanx3GIbger3cXFxenp6UlgNBrNZrm36fTDSrtPXz6zLwvS1hbQg9Xu7OxMnBNgIQNOPVbasaMMTH5m2nPtnHIeqB34+c9XcSyaa+eU06odNIqhycsnv3x8w4ACu9eY49o55RRpJw1LOsYa9CLPtXPK6aAdFnOMNWi3XDunnA7aoUEmhgOdtNOHyW1SluR8//oHVPzFf38zrzncubybxV0OA4EttZvP59Pp1DwJLtGJEJPamc1mk8lkNBpxZAvX19ccMAz6046BBhOVxliDicIqcwOGWPR5HXiwdjc3N2ZsChJub2854D6LxWLj8MjQ5uBu2uk5BvSpHZzTc+FadqgdnIuHzHmQhmQOa4Bz4/GYGQW4diTVDvtWxho6bSkYaDBRaYw16FC6oUnZlXaYwAqdE1BDObIBJZixMrzIklQ7rJ8Ya5i8fBKj+9ZOl9dPXz5jhRdDeGkIh5n42fsX0sO8wAO0Oz8/Z3YDRsViiuVaOpMZb7S1eByjmBf1WITaavRxU6QdPmP9qQtGrD61g2E6lDbmBbpqBw+Y2nB1dcWYwpiHSwbCLoS9AWMk6i8DgaGVV6FVu43oqQ6tT+0ANrPm2zndmBToqh0kY2pA+6TBnMeMBgYS7dINr74l164U1LjLu1kcKG3f2qVrO9wG5NPVNjZmBLpqZypsJp8ZDVEvo535zYvPdqCzdvDJzHPS9q1dZieLmqs3N2gMBLpqZ/IzP5QydTZqZ8TCAi4+iVnbgczzHzFF2mFegUb4aNcKJ23f2qHlz+0gZbw9dgW21C4tkZFMZropWQuM5ICBUbSlKGk9aCcNL9QmH8yTHF4H+p/tACY8vZltY5hTHfj6tJP2aD6VQxOmNsiikxeBLbXL5DOjQR+FbDy306cqA6SadvpHU9JQIhlrMAlpQ9k1p4myyONFoKt2SGBqoHAnq8ul2VJga6zvAY/Rg+mQ2YOkP+2wQGQsYDYBcM4kAJ3Q1szrbq+d8QmkpRDSmAqLxRxj96c6vDp7HUV/2qULMvlSATMWHqTOAT0c9RRLN1ilbwyymu3t9toB84MRzGQYlf+WQlfYyWTC3jA2sykZLP1pl//PtLXo4ezahNRuXgSMdhniYiud8PJgepOBAp6HgXXgfgSt8tDoTzu0toM3QY5/eRHQY9mVJf57B68D+ID5gW9CT4SFJyBAl9dI+XCj7EDoVTvUxHTvKcipm3kSPbZtYEQvFtkVeJh2AAv//CGIFF9m38d8w5ZngOattNNbQkiQ7jTzDfnaDPN/ZbHJSi6u8zDDyQ+DJao3FkZcOTFBp54ykYwePKG5W4YDqJh5eyLpiQa2Dug0Pw/GY/RkdqOdnBOGVm1X2h1T45urgTkoTrcUMAwqm7+EoW07XLsdY/YTbVXYlH7X7hga31wN4BlVCozHY1R5XY5hWLrh8CJ7DI1vrgZdD18AZj4OHgyu3e5JD5MzILlta3LEuHa7BxrpLyoyoNoO0Dng2u0LLNewzkMBNV+1YXqT85fBfkUBXDunAq6dUwHXzqmAa+f0znL5PyJrKwabtErWAAAAAElFTkSuQmCC" /></td>
+					</tr>
+				</table>
+				</div>
+				
+		</td>
+		<td></td>
+	</tr>
+</table>
+
+<table class="body-wrap">
+	<tr>
+		<td></td>
+		<td class="container" bgcolor="#FFFFFF">
+
+			<div class="content">
+			<table>
+				<tr>				
+					<td>
+						<p class="callout">
+							Event: <strong>{Event}</strong>
+						</p>
+
+						<p class="lead">
+							{Message}
+						</p>
+											 
+						<p class="callout">
+							Date: <strong>{Date}</strong>
+						</p>
+						
+					</td>
+				</tr>
+			</table>
+			</div>									
+		</td>
+		<td></td>
+	</tr>
+</table>
+
+<table class="footer-wrap">
+	<tr>
+		<td></td>
+		<td class="container">		
+			<div class="content">
+				<table bgcolor="#00b050">
+				<tr>
+					<td align="center">
+						<p>
+       					 © 2020 PlusLog
+    					</p>
+					</td>
+				</tr>
+				</table>
+			</div>			
+		</td>
+		<td></td>
+	</tr>
+</table>
+
+</body>
+</html>

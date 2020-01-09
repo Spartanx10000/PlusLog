@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PlusLog</name>
+    </assembly>
+    <members>
+        <member name="T:PlusLog.LogHelper">
+            <summary>
+            This class contains the methods to access the different loggers supported by the PlusLog library.
+            </summary>
+        </member>
+        <member name="M:PlusLog.LogHelper.GetFileLogger">
+            <summary>This method creates an instance of the FileLogger class.</summary>
+            <returns>Returns an instance of the FileLogger class.</returns>
+        </member>
+        <member name="M:PlusLog.LogHelper.GetDbLogger(System.String)">
+            <summary>This method creates an instance of the DbLogger class.</summary>
+            <param name="connectionName">The name of the connection used for the Database Logger.</param>
+            <returns>Returns an instance of the DbLogger class.</returns>
+        </member>
+        <member name="M:PlusLog.LogHelper.GetMailLogger">
+            <summary>This method creates an instance of the MailLogger class.</summary>
+            <returns>Returns an instance of the MailLogger class.</returns>
+        </member>
+        <member name="T:PlusLog.Targets.DbLogger">
+            <summary>This class contains the methods to use the database logger.</summary>
+        </member>
+        <member name="M:PlusLog.Targets.DbLogger.#ctor(System.String)">
+            <summary>DbLogger class constructor.</summary>
+            <param name="connection">The name of the connection used for the database Logger.</param>
+        </member>
+        <member name="M:PlusLog.Targets.DbLogger.Success(System.String)">
+            <summary>This method records a success event.</summary>
+            <param name="message">The message that is logged.</param>
+        </member>
+        <member name="M:PlusLog.Targets.DbLogger.Info(System.String)">
+            <summary>This method records a info event.</summary>
+            <param name="message">The message that is logged.</param>
+        </member>
+        <member name="M:PlusLog.Targets.DbLogger.Debug(System.String)">
+            <summary>This method records a debug event.</summary>
+            <param name="message">The message that is logged.</param>
+        </member>
+        <member name="M:PlusLog.Targets.DbLogger.Warning(System.String)">
+            <summary>This method records a warning event.</summary>
+            <param name="message">The message that is logged.</param>
+        </member>
+        <member name="M:PlusLog.Targets.DbLogger.Error(System.String)">
+            <summary>This method records a error event.</summary>
+            <param name="message">The message that is logged.</param>
+        </member>
+        <member name="T:PlusLog.Targets.FileLogger">
+            <summary>This class contains the methods to use the file logger.</summary>
+        </member>
+        <member name="M:PlusLog.Targets.FileLogger.#ctor(System.String,System.String)">
+            <summary>FileLogger class constructor.</summary>
+            <param name="fileName">The name of the file.</param>
+            <param name="filePath">The path of the file.</param>
+        </member>
+        <member name="M:PlusLog.Targets.FileLogger.Success(System.String)">
+            <summary>This method records a success event.</summary>
+            <param name="message">The message that is logged.</param>
+        </member>
+        <member name="M:PlusLog.Targets.FileLogger.Info(System.String)">
+            <summary>This method records a info event.</summary>
+            <param name="message">The message that is logged.</param>
+        </member>
+        <member name="M:PlusLog.Targets.FileLogger.Debug(System.String)">
+            <summary>This method records a debug event.</summary>
+            <param name="message">The message that is logged.</param>
+        </member>
+        <member name="M:PlusLog.Targets.FileLogger.Warning(System.String)">
+            <summary>This method records a warning event.</summary>
+            <param name="message">The message that is logged.</param>
+        </member>
+        <member name="M:PlusLog.Targets.FileLogger.Error(System.String)">
+            <summary>This method records a error event.</summary>
+            <param name="message">The message that is logged.</param>
+        </member>
+        <member name="T:PlusLog.Targets.MailLogger">
+            <summary>This class contains the methods to use the mail logger.</summary>
+        </member>
+        <member name="M:PlusLog.Targets.MailLogger.#ctor(PlusLog.Config.Xml.Mail.MailSettings)">
+            <summary>MailLogger class constructor.</summary>
+            <param name="settings">Contains smtp settings.</param>
+        </member>
+        <member name="M:PlusLog.Targets.MailLogger.Success(System.String,System.String)">
+            <summary>This method send a success event mail.</summary>
+            <param name="subject">The subject of the mail.</param>
+            <param name="message">The message that is sended.</param>
+        </member>
+        <member name="M:PlusLog.Targets.MailLogger.Info(System.String,System.String)">
+            <summary>This method send a info event mail.</summary>
+            <param name="subject">The subject of the mail.</param>
+            <param name="message">The message that is sended.</param>
+        </member>
+        <member name="M:PlusLog.Targets.MailLogger.Debug(System.String,System.String)">
+            <summary>This method send a debug event mail.</summary>
+            <param name="subject">The subject of the mail.</param>
+            <param name="message">The message that is sended.</param>
+        </member>
+        <member name="M:PlusLog.Targets.MailLogger.Warning(System.String,System.String)">
+            <summary>This method send a warning event mail.</summary>
+            <param name="subject">The subject of the mail.</param>
+            <param name="message">The message that is sended.</param>
+        </member>
+        <member name="M:PlusLog.Targets.MailLogger.Error(System.String,System.String)">
+            <summary>This method send a error event mail.</summary>
+            <param name="subject">The subject of the mail.</param>
+            <param name="message">The message that is sended.</param>
+        </member>
+    </members>
+</doc>
